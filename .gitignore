@@ -106,3 +106,5 @@ typings/
 .env.test.local
 .env.production.local
 .idea
+
+package-lock.json
