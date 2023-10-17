@@ -1,0 +1,49 @@
+{
+  "initData": "query_id=AAEivrBwAgAAACK-sHCHvFVR&user=%7B%22id%22%3A6185598498%2C%22first_name%22%3A%22AFK%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1697461546&hash=25dd2a6c9a4f389a0d7369e3cbd6d2e28c0cb97010c098f4171acbec925a02b8",
+  "initDataUnsafe": {
+    "query_id": "AAEivrBwAgAAACK-sHCHvFVR",
+    "user": {
+      "id": 6185598498,
+      "first_name": "AFK",
+      "last_name": "",
+      "language_code": "ru",
+      "allows_write_to_pm": true
+    },
+    "auth_date": "1697461546",
+    "hash": "25dd2a6c9a4f389a0d7369e3cbd6d2e28c0cb97010c098f4171acbec925a02b8"
+  },
+  "version": "6.9",
+  "platform": "tdesktop",
+  "colorScheme": "dark",
+  "themeParams": {
+    "bg_color": "#17212b",
+    "button_color": "#5288c1",
+    "button_text_color": "#ffffff",
+    "hint_color": "#708499",
+    "link_color": "#6ab3f3",
+    "secondary_bg_color": "#232e3c",
+    "text_color": "#f5f5f5"
+  },
+  "isExpanded": true,
+  "viewportHeight": 547,
+  "viewportStableHeight": 547,
+  "isClosingConfirmationEnabled": false,
+  "headerColor": "#17212b",
+  "backgroundColor": "#17212b",
+  "BackButton": {
+    "isVisible": false
+  },
+  "MainButton": {
+    "text": "CONTINUE",
+    "color": "#5288c1",
+    "textColor": "#ffffff",
+    "isVisible": false,
+    "isProgressVisible": false,
+    "isActive": true
+  },
+  "SettingsButton": {
+    "isVisible": false
+  },
+  "HapticFeedback": {},
+  "CloudStorage": {}
+}
