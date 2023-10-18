@@ -18,7 +18,8 @@ function GlobalWrapper({children}) {
 
 export default function App() {
   const [isInFly, setIsInFly] = useState(true)
-  const [isLoggedIn, setIsLoggedIn] = useState(true)
+  // TODO: set false on prod
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const {tg, initData, colorScheme, user} = useTelegram()
 
   useEffect(() => {

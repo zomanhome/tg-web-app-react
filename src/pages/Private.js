@@ -1,7 +1,10 @@
-import {Card, Space} from "antd"
+import {Card, Avatar, Space} from "antd"
 import {useEffect, useState} from "react"
+import {EditOutlined, EllipsisOutlined, SettingOutlined} from "@ant-design/icons"
 import {useTelegram} from "../hooks/use-telegram"
 import {gtInstance} from "../api"
+
+const {Meta} = Card
 
 export default function Private() {
   const [users, setUsers] = useState([])
@@ -30,11 +33,23 @@ export default function Private() {
   return (
     <Space direction='vertical'>
       {users.map(user => {
-        const {_id: id, name, email} = user
+        const {_id: id, name, email, avatarURL} = user
 
         return (
-          <Card key={id} title={name}>
-            {email}
+          <Card
+            key={id}
+            title={name}
+            actions={[
+              <SettingOutlined key="setting"/>,
+              <EditOutlined key="edit"/>,
+              <EllipsisOutlined key="ellipsis"/>,
+            ]}
+          >
+            <Meta
+              avatar={<Avatar src={avatarURL}/>}
+              title={name}
+              description={email}
+            />
           </Card>
         )
       })}
