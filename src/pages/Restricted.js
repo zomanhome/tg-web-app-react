@@ -16,7 +16,6 @@ export default function Restricted() {
     tg.MainButton.setText('Get access')
     tg.MainButton.show()
     tg.MainButton.onClick(onSendData)
-    onToggleMainButton()
   }, [tg.MainButton, onSendData, onToggleMainButton])
 
   return (
