@@ -1,13 +1,13 @@
 import {Alert} from "antd"
 import {useTelegram} from "../hooks/use-telegram"
 import {useCallback, useEffect} from "react"
-import {instance} from "../api"
+import {tgInstance} from "../api"
 
 export default function Restricted() {
-  const {tg, user, onClose, query_id} = useTelegram()
+  const {tg, user, onClose, query_id, onToggleMainButton} = useTelegram()
 
   const onSendData = useCallback(async () => {
-      await instance.post('/web-data', {user, query_id})
+      await tgInstance.post('/web-data', {user, query_id})
       onClose()
     },
     [query_id, user, onClose])
@@ -16,7 +16,8 @@ export default function Restricted() {
     tg.MainButton.setText('Get access')
     tg.MainButton.show()
     tg.MainButton.onClick(onSendData)
-  }, [tg.MainButton, onSendData])
+    onToggleMainButton()
+  }, [tg.MainButton, onSendData, onToggleMainButton])
 
   return (
     <Alert

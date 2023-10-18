@@ -1,7 +1,12 @@
 import axios from "axios"
 
-export const instance = axios.create({
+export const tgInstance = axios.create({
   baseURL: 'https://tg-web-app-backend.onrender.com',
-  timeout: 3000,
   headers: {'Content-Type': 'application/json'},
 })
+
+export const gtInstance = axios.create({
+  baseURL: 'https://goose-track-backend-54zr.onrender.com',
+  headers: {'Content-Type': 'application/json'},
+})
+
